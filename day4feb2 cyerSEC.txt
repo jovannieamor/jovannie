@@ -122,7 +122,7 @@ before: nmap -v 10.m.100.8
 @Cucm:
 config t
 int fa 0/0
- ip add 10.m.100.9 255.255.255.0 Secondary
+ ip add 10.52.100.9 255.255.255.0 Secondary
 service finger
 service tcp-small-servers
 service udp-small-servers
