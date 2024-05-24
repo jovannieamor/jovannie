@@ -339,7 +339,7 @@ config t
 hostname PLDTITO
 Track 1 Int gi 0/1 line-protocol
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.52.1.6
 standby 1 preempt
 standby 1 Priority 150
 standby 1 Track 1 decrement 60
@@ -348,7 +348,7 @@ standby 1 Track 1 decrement 60
 config t
 hostname GLOBE
 Int vlan 1
-standby 1 ip 10.__.1.6
+standby 1 ip 10.52.1.6
 standby 1 preempt
 standby 1 Priority 100
 do sh standby
@@ -420,8 +420,12 @@ int e0/3
  swi mode trunk
 
 D1 = root primary
+conf t
+spanning-tree vlan 1-100 root primary
+do sh spanning-tree vlan 1
 d2 = root secondary
-
+conf t
+spanning-tree vlan 1-100 root secondary
 homelab: VTP:
 d1/d2:
 config t
