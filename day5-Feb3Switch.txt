@@ -122,13 +122,13 @@ indicator no.3: Kislap every 1/2 seconds
 TASK6: HOW TO GET FIRED IMMEDIATELY!
 @baba:
 config t
- spanning-tree vlan 1
+NO spanning-tree vlan 1
 end
 @taas:
 config t
-spanning-tree vlan 1
+NO spanning-tree vlan 1
 end
-
+delete NO to resolve
 TASK7: HOW TO BECOME A WORLD-CLASS NETWORK ENGINEER
 SPECIALIZING IN SWITCH:
 Master the 4 super Hereos of Switching
@@ -151,7 +151,7 @@ Int Range fa0/10-12
  switchport trunk Encap Dot1Q
  switchport mode trunk
  do sh int trunk
-Dot1q = Qupid,mave switches love each other:
+Dot1q = Qupid,make switches love each other:
       IEEE standard where SW will from Layer 2 trunks
 
 TASK9: SPANNING-TREE PROTOCOL: 802.1D
@@ -177,9 +177,9 @@ Blk - LIS - LRN -FWD
       15s   15s     = 30s
 
 Task9.2: STP Port Roles: 
-DesignatedPort/DP = fwd port of Root Bridge
-RootPort/RP = fwd port of non-root Bridge(1 only)
-AlternatePort/AP = blk port of nonRootPorts
+DesignatedPort/DP = fwd port of Root Bridge, ako ang boss
+RootPort/RP = fwd port of non-root Bridge(1 only), yes boss
+AlternatePort/AP = blk port of nonRootPorts, mamatay ka sana, im next boss
 BackupPort = yuck yuck
 
 how becomes RootPort = kanangKamay
@@ -216,10 +216,10 @@ end
 #sh int status err-disabled 
 TAAS: bounce/UP/down
 config t
-int fa 0/1
+int fa 0/3
  shut
  no shut
-int fa 0/5
+int fa 0/7
  shut
  no shut
 end
@@ -312,7 +312,7 @@ switchport port-security mac-address Sticky
 switchport port-security maximum 1
 switchport port-security violation shutdown
 do sh port-security address
-   1    ccd8.c1fb.1045    SecureSticky                  Fa0/6        -
+   1    ccd8.c1fb.1045    SecureSticky                  Fa0/6        
    1    ccd8.c1fb.2325    SecureSticky                  Fa0/8
 do sh int status err-disable
 
